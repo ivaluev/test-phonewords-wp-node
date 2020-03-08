@@ -8,7 +8,7 @@ interface IProps {
 
 export default function PhonewordsCloud({ items }: IProps) {
   return (
-    <ChipContainer>{items && items.map(i => <Chip key={i} label={i} />)}</ChipContainer>
+    <ChipContainer>{items && items.map(i => <Chip variant="outlined" key={i} label={i} />)}</ChipContainer>
   )
 }
 

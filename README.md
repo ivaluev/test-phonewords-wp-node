@@ -8,7 +8,7 @@ npm run build
 npm start
 ```
 
-project will be started on localhost:20002
+project will be started on localhost:20002 (browser will not open automatically)
 
 
 ## Notes
@@ -39,11 +39,13 @@ config.js - env schema and setup for development version
 
 ## Technology
 
-- react
-- typescript
-- styled-components
+- react (hooks)
+- react state: - local - but can be easily extended to Redux store (with typesafe actions) / or url state 
+- typescript (latest)
+- styled-components (themed)
+- ui frameword - material-ui - can be changed to Bootstrap, Semantic, Ant, Ring etc or fully custom
 - @material-ui
-- koa
+- bachend - koa - can be express
 - ...
 
 ## Scripts

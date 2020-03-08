@@ -50,7 +50,7 @@ export default function AppBar() {
             <ListItem>
               <Margin margin="-4px 0 4px">
                 <Typography variant="h6" color="inherit">
-                  <T>App</T>
+                  <T>Phonewords</T>
                 </Typography>
               </Margin>
             </ListItem>
