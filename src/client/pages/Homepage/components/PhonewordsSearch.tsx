@@ -10,8 +10,15 @@ const Container = styled.div`
 
 const StyledInputBase: any = styled(InputBase)`
   width: calc(100% - 48px);
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    margin: 0;
+    -webkit-appearance: none;
+  }
+  /* Firefox */
   input[type=number] {
-    appearance: textfield;
+    -moz-appearance: textfield;
   }
 `
 

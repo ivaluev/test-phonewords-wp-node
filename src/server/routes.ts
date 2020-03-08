@@ -7,7 +7,7 @@ import { getPhonewords } from "./api/phonewords"
 const config = require("../../config")
 const router = new Router()
 
-router.get("/api/phonewords", async (ctx, next) => {
+router.get("/api/phonewords", async (ctx) => {
   try {
     const { term }= ctx.request.query
     const result = await getPhonewords(term)
@@ -21,7 +21,7 @@ router.get("/api/phonewords", async (ctx, next) => {
 
 router.get("(.*)", async ctx => {
   const index = fs.readFileSync(
-    path.resolve(__dirname, "../../client/index.html"),
+    path.resolve(__dirname, "../client/index.html"),
     {
       encoding: "utf8"
     }
