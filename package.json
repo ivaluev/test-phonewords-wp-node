@@ -1,0 +1,80 @@
+{
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "build-server": "tsc -p tsconfig.server.json",
+    "build-client": "webpack --config etc/webpack.production.js",
+    "build": "npm run clean && npm run build-client && npm run build-server",
+    "postinstall": "npm run build",
+    "start": "node dist/server/index.js",
+    "dev": "env-cmd .env webpack-dev-server --config etc/webpack.dev.js --mode development --inline --hot",
+    "lint": "tslint -c tslint.json \"src/**/*.{ts,tsx}\"",
+    "lint-css": "stylelint \"./src/**/*.tsx\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run lint-css"
+    }
+  },
+  "engines": {
+    "node": "10.9.0"
+  },
+  "dependencies": {
+    "@material-ui/core": "^3.9.4",
+    "@material-ui/icons": "^3.0.2",
+    "deepmerge": "^3.3.0",
+    "dotenv": "^6.2.0",
+    "dotenv-utils": "^0.2.0",
+    "koa": "^2.11.0",
+    "koa-body": "^4.1.1",
+    "koa-compress": "^3.0.0",
+    "koa-conditional-get": "^2.0.0",
+    "koa-etag": "^3.0.0",
+    "koa-remove-trailing-slashes": "^2.0.0",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "polished": "^2.3.3",
+    "qs": "latest",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-router": "^5.1.2",
+    "react-router-dom": "^5.1.2",
+    "styled-components": "^3.4.2",
+    "styled-normalize": "^4.0.0",
+    "tslint": "^5.20.1",
+    "validator": "^10.6.0"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.11.2",
+    "@types/koa-compress": "^2.0.9",
+    "@types/koa-conditional-get": "^2.0.0",
+    "@types/koa-etag": "^3.0.0",
+    "@types/koa-router": "^7.4.0",
+    "@types/koa-static": "^4.0.0",
+    "@types/qs": "latest",
+    "@types/react": "^16.9.23",
+    "@types/react-dom": "^16.9.5",
+    "@types/react-router-dom": "^4.3.5",
+    "@types/validator": "^9.4.1",
+    "awesome-typescript-loader": "^5.2.0",
+    "env-cmd": "^8.0.2",
+    "fork-ts-checker-webpack-plugin": "^0.4.6",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^1.0.0-rc.13",
+    "stylelint": "^9.4.0",
+    "stylelint-config-rational-order": "0.0.2",
+    "stylelint-config-recommended": "^2.2.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.10.0",
+    "sw-precache-webpack-plugin": "latest",
+    "tslint-config-prettier": "^1.14.0",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.8.3",
+    "typescript-styled-plugin": "^0.10.0",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
+    "webpack-watch-server": "^1.2.1"
+  },
+  "private": true
+}
