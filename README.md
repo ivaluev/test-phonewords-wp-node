@@ -11,11 +11,8 @@ npm start
 project will be started on localhost:20002 (browser will not open automatically)
 
 
-## Notes
-- TODO
-
 ## App UI flow / features
-- TODO
+- user can enter digits (from 2 to 9) - search will start automatically after 1 second
 
 ## Project Structure
 
@@ -45,8 +42,8 @@ config.js - env schema and setup for development version
 - styled-components (themed)
 - ui frameword - material-ui - can be changed to Bootstrap, Semantic, Ant, Ring etc or fully custom
 - @material-ui
-- bachend - koa - can be express
-- ...
+- backend - koa - can be express
+- testing - react-testing-libraty and jest (not done)
 
 ## Scripts
 
