@@ -10,19 +10,19 @@ export async function getPhonewords(term: string): Promise<string[]> {
 
 const digitToCharsMap: string[] = ["", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"]
 
-function compileWords(inputDigits: number[]) : string[]
+function compileWords(inputDigitsArray: number[]) : string[]
 {
-  const output: string[] = new Array<string>(inputDigits.length);
+  const output: string[] = new Array<string>(inputDigitsArray.length);
 
   const words:string[] = [];
 
-  prepareWords(inputDigits, 0, output, inputDigits.length, words)
+  prepareWords(inputDigitsArray, 0, output, inputDigitsArray.length, words)
   
   return words
 }
 
 function prepareWords(
-  inputDigits: number[], 
+  inputDigitsArray: number[], 
   currDigit: number, 
   output: string[], 
   inputDigitsArrayLength: number, 
@@ -35,13 +35,14 @@ function prepareWords(
 		return
 	}
  
-  for(const ch of digitToCharsMap[inputDigits[currDigit]]) {
+  // iterating over digit chars
+  for(const ch of digitToCharsMap[inputDigitsArray[currDigit]]) {
 
     output[currDigit] = ch
     
-    prepareWords(inputDigits, currDigit + 1, output, inputDigitsArrayLength, words)
+    prepareWords(inputDigitsArray, currDigit + 1, output, inputDigitsArrayLength, words)
     
-		if (inputDigits[currDigit] === 0 || inputDigits[currDigit] === 1)
+		if (inputDigitsArray[currDigit] === 0 || inputDigitsArray[currDigit] === 1)
 		{
       return
 		}

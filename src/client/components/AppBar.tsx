@@ -73,7 +73,7 @@ export default function AppBar() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" color="inherit">
-            <T>App</T>
+            <T>Phonewords</T>
           </Typography>
         </Toolbar>
       </StyledAppBar>

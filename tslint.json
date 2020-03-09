@@ -10,10 +10,13 @@
     "jsx-no-lambda": false,
     "no-console": false,
     "no-unused-locals": false,
+    "no-unused-expressions": false,
+    "no-debugger": false,
     "ordered-imports": false,
     "object-literal-sort-keys": false,
 		"jsx-boolean-value": ["never"],
     "semicolon": [false, "always"],
-    "quotemark": [true, "double"]
+    "quotemark": [true, "double"],
+    "interface-name" : false
   }
 }

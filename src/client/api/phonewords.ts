@@ -2,9 +2,7 @@ import { callApi, delay } from "src/client/utils/http"
 
 export async function getPhonewords(value: string): Promise<string[]> {
   
-  await delay(1500)
+  const [delayed, result] = await Promise.all([delay(1300), callApi("GET", `/api/phonewords?term=${value}`)]);
 
-  const result = await callApi("GET", `/api/phonewords?term=${value}`)
-
-  return result
+  return result as string[]
 }

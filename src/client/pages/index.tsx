@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import AppBar from "../components/AppBar";
-import Homepage from "./Homepage";
+import Home from "./Home";
 import NotFound from "./404";
 
 export default function App() {
@@ -11,7 +11,7 @@ export default function App() {
 				<AppBar />
 				<Switch>
 					<Route path="/" exact>
-						<Homepage />
+						<Home />
 					</Route>
 					<Route>
 						<NotFound />
