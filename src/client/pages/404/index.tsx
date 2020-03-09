@@ -1,6 +1,10 @@
 import React from "react"
 
+export interface Props {
+  text?: string
+}
+
 // TODO Apply styling
-export default function NotFound() {
-  return <div>Not Found</div>
+export default function NotFound({ text }: Props) {
+  return <div data-testid="not-found-form">{text || "Not Found"}</div>
 }

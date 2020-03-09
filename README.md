@@ -1,5 +1,10 @@
 # App Name
 
+## Notes
+
+- Initial task description is located in docs folder: [link](./docs/task.md)
+- I Love doing UI and a phone interface would definately be my favorite part of this task, but the task time frame has not provided a room for it to implement, unfortunately
+
 ## How to Run
 
 ```

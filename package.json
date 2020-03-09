@@ -9,7 +9,9 @@
     "start": "node dist/server/index.js",
     "dev": "env-cmd .env webpack-dev-server --config etc/webpack.dev.js --mode development --inline --hot",
     "lint": "tslint -c tslint.json \"src/**/*.{ts,tsx}\"",
-    "lint-css": "stylelint \"./src/**/*.tsx\""
+    "lint-css": "stylelint \"./src/**/*.tsx\"",
+    "test": "jest",
+    "test-watch": "jest --watch"
   },
   "husky": {
     "hooks": {
@@ -22,6 +24,7 @@
   "dependencies": {
     "@material-ui/core": "^4.9.5",
     "@material-ui/icons": "^4.9.1",
+    "@testing-library/jest-dom": "^5.1.1",
     "deepmerge": "^3.3.0",
     "dotenv": "^6.2.0",
     "dotenv-utils": "^0.2.0",
@@ -41,7 +44,6 @@
     "react-router-dom": "^5.1.2",
     "styled-components": "^3.4.2",
     "styled-normalize": "^4.0.0",
-    "tslint": "^5.20.1",
     "validator": "^10.6.0"
   },
   "devDependencies": {
@@ -56,9 +58,12 @@
     "@types/react-dom": "^16.9.5",
     "@types/react-router-dom": "^4.3.5",
     "@types/validator": "^9.4.1",
+    "@testing-library/react": "^9.5.0",
+    "@types/jest": "^25.1.4",
     "awesome-typescript-loader": "^5.2.0",
     "env-cmd": "^8.0.2",
     "fork-ts-checker-webpack-plugin": "^0.4.6",
+    "jest": "^25.1.0",
     "html-webpack-plugin": "^3.2.0",
     "husky": "^1.0.0-rc.13",
     "stylelint": "^9.4.0",
@@ -67,6 +72,8 @@
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-processor-styled-components": "^1.10.0",
     "sw-precache-webpack-plugin": "latest",
+    "ts-jest": "^25.2.1",
+    "tslint": "^5.20.1",
     "tslint-config-prettier": "^1.14.0",
     "tslint-react": "^3.6.0",
     "typescript": "^3.8.3",
