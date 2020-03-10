@@ -1,4 +1,4 @@
-import styled from "src/client/theme/index"
+import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;

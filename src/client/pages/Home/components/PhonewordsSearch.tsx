@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react"
 import { isEmpty } from "validator"
 import { InputBase, IconButton } from "@material-ui/core"
 import { Search as SearchIcon, Clear as ClearIcon } from "@material-ui/icons"
-import styled from "src/client/theme/index"
 import { useDebounce } from "src/client/utils/hooks/useDebounce"
+import styled from "styled-components"
 
 interface IProps {
   onSearch: (value: string) => void;

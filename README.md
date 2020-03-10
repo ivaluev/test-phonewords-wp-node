@@ -48,7 +48,7 @@ config.js - env schema and setup for development version
 - ui frameword - material-ui - can be changed to Bootstrap, Semantic, Ant, Ring etc or fully custom
 - @material-ui
 - backend - koa - can be express
-- testing - react-testing-libraty and jest (not done)
+- testing - react-testing-library (setup but only starter tests have been written)
 
 ## Scripts
 
@@ -58,9 +58,10 @@ config.js - env schema and setup for development version
 - `build-client` - wii create client side part of bundle
 - `start` - will run production version
 - `dev` - will run dev version
-- `postinstall` - will run postinstall scripts
 - `lint` - will run css and js linters
 - `lint-css` - will run only css linter
+- `test` - will run tests
+
 
 ## Production deployment
 

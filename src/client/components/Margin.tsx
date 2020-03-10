@@ -1,15 +1,15 @@
 import React from "react"
-import styled from "src/client/theme/index"
-
-const StyledMargin = styled<IProps, "div">("div")`
-	margin: ${({ margin }) => margin};
-`
+import styled from "styled-components";
 
 interface IProps {
-	margin?: string;
+  margin?: string;
 	className?: string;
 	children?: React.ReactNode | React.ReactNodeArray;
 }
+
+const StyledMargin = styled.div<IProps>`
+  margin: ${props => props.margin};
+`
 
 export const Margin = ({ margin, className, children }: IProps) => {
 	return (

@@ -1,8 +1,8 @@
-import { injectGlobal } from "./index";
-import styledNormalize from "styled-normalize";
+import { createGlobalStyle } from "styled-components"
+import styledNormalize from "styled-normalize"
 
 // tslint:disable-next-line no-unused-expression
-injectGlobal`
+const GlobalStyle = createGlobalStyle`
   ${
     // @ts-ignore
     styledNormalize
@@ -24,3 +24,5 @@ injectGlobal`
     outline: none;
   }
 `;
+
+export default GlobalStyle

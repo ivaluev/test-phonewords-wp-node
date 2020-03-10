@@ -1,6 +1,6 @@
 import React from "react"
-import styled from "src/client/theme"
 import { Chip } from "@material-ui/core"
+import styled from "styled-components"
 
 export interface IProps {
   items: string[]
