@@ -2,29 +2,22 @@
   "compilerOptions": {
     "target": "es2017",
     "module": "commonjs",
-    "lib": ["es2017", "DOM"],
+    "lib": ["es2017"],
+    "allowJs": true,
     "baseUrl": ".",
-    "paths": {
-      "*": ["node_modules/@types/*", "*"],
-      "src/*": ["src/server/*"]
-    },
-    "jsx": "react",
-
     "outDir": "./dist/server",
-
+    "rootDir": "src/server",
     "sourceMap": true,
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "noImplicitAny": true,
     "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": false,
-
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-
+    "types": ["jest", "node", "koa", "koa-router"],
     // we want this, but atm there is so many error to fix
-    "strictNullChecks": false
+    "strictNullChecks": false,
   },
   "include": ["./src/server/**/*"]
 }

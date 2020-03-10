@@ -1,7 +1,7 @@
-import * as React from "react";
-import Button, { ButtonProps } from "@material-ui/core/Button";
-import styled from "src/client/theme/index";
-import { darken } from "polished";
+import * as React from "react"
+import Button, { ButtonProps } from "@material-ui/core/Button"
+import { darken } from "polished"
+import styled from "src/client/theme/styled"
 
 interface IProps {
   onClick: any;
@@ -31,22 +31,21 @@ const ButtonContainer = styled.div`
   margin-top: 2em;
 `
 
-const StyledButton = styled<ButtonProps>(Button)`
+const StyledButton = styled(Button)`
   && {
     padding: 14px 30px;  
-    color: ${({ theme }) => theme.colors.white};
+    color: ${props => props.theme.colors.white};
     font-weight: 600;
     background-color: ${({ theme }) => theme.colors.blue};
     border-radius: 3px;
 
     &:hover {
-      background-color: ${({ theme }) => darken(0.15, theme.colors.blue)};
+      background-color: ${props => darken(0.15, props.theme.colors.blue)};
     }
 
     ${({ disabled, theme }) =>
       disabled &&
-      `
-    background-color: ${theme.colors.gray3}; 
+      `background-color: ${theme.colors.gray3}; 
     `};
   }
 `;

@@ -1,11 +1,11 @@
 import React from "react"
 import {
-  default as TypographyBase,
-  TypographyProps
+  default as TypographyBase
 } from "@material-ui/core/Typography"
-import styled from "src/client/theme/index"
+import styled from "styled-components"
 
-const Typography = styled<TypographyProps>(TypographyBase)`
+
+const Typography = styled(TypographyBase)`
   && {
     display: block;
     margin: 48px 0;

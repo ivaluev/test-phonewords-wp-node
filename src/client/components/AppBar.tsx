@@ -13,19 +13,19 @@ import {
 } from "@material-ui/core";
 import List, { ListProps } from "@material-ui/core/List"
 import { default as HomeIcon } from "@material-ui/icons/Home"
-import styled from "src/client/theme/index"
 import { Margin } from "./Margin"
 import { useHistory } from "react-router"
 import T from "./Translate";
+import styled from "../theme/styled";
 
-const StyledAppBar = styled<AppBarProps>(AppBarBase)`
+const StyledAppBar = styled(AppBarBase)`
   && {
     margin-bottom: 20px;
     background-color: ${props => props.theme.colors.blue};
   }
 `
 
-const StyledList = styled<ListProps>(List)`
+const StyledList = styled(List)`
   width: 300px;
 `
 

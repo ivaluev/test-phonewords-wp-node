@@ -9,7 +9,6 @@ import PhonewordsErrorBar from "./components/PhonewordsErrorBar"
 import { usePagination } from "src/client/utils/hooks/usePagination"
 import { LoadMore } from "./components/LoadMore"
 import { Backdrop, CircularProgress } from "@material-ui/core"
-import { BackdropProps } from "@material-ui/core/Backdrop"
 import styled from "styled-components"
 import validator from "validator"
 
@@ -90,7 +89,7 @@ export default function Home() {
   );
 }
 
-const BackdropStyled = styled<BackdropProps>(Backdrop)`
+const BackdropStyled = styled(Backdrop)`
   z-index: 1300 !important;
   color: #fff !important;
 `
