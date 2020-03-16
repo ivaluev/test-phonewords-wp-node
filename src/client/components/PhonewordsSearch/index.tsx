@@ -26,7 +26,8 @@ export default function PhonewordsSearch({ onSearch, onReset }: IProps) {
   }
 
   const handleChange = (e: React.FormEvent<HTMLInputElement>) => {
-     setSearch(e.currentTarget.value)
+    console.log("CALLING handleChange")
+    setSearch(e.currentTarget.value)
   }
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -43,6 +44,7 @@ export default function PhonewordsSearch({ onSearch, onReset }: IProps) {
         <form onSubmit={handleSubmit}>
           <InputContainer>
             <StyledInputBase
+              data-testid="search"
               id="search"
               type="number"
               value={search}
@@ -70,7 +72,7 @@ const Container = styled.div`
   margin: 10px;
 `
 
-const StyledInputBase: any = styled(InputBase)`
+export const StyledInputBase: any = styled(InputBase)`
   width: calc(100% - 48px);
   /* Chrome, Safari, Edge, Opera */
   input::-webkit-outer-spin-button,

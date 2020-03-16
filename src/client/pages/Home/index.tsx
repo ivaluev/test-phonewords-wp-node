@@ -1,16 +1,16 @@
 import React, { useState } from "react"
 import { getPhonewords } from "src/client/api/phonewords"
-import { Container } from "src/client/components/Container"
-import { NoResults } from "src/client/components/NoResults"
-import T from "src/client/components/Translate"
-import PhonewordsCloud from "./components/PhonewordsCloud"
-import PhonewordsSearch from "./components/PhonewordsSearch"
-import PhonewordsErrorBar from "./components/PhonewordsErrorBar"
+import { Container } from "src/client/layout/Container"
+import { NoResults } from "src/client/layout/NoResults"
+import T from "src/client/layout/Translate"
+import PhonewordsSearch from "../../components/PhonewordsSearch"
 import { usePagination } from "src/client/utils/hooks/usePagination"
-import { LoadMore } from "./components/LoadMore"
+import { LoadMore } from "../../components/LoadMore"
 import { Backdrop, CircularProgress } from "@material-ui/core"
 import styled from "styled-components"
 import validator from "validator"
+import PhonewordsErrorBar from "../../components/PhonewordsErrorBar"
+import PhonewordsCloud from "../../components/PhonewordsCloud"
 
 export default function Home() {
   const [words, setWords] = useState<string[]>([])

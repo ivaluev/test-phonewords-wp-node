@@ -6,5 +6,5 @@ export interface Props {
 
 // TODO Apply styling
 export default function NotFound({ text }: Props) {
-  return <div data-testid="not-found-form">{text || "Not Found"}</div>
+  return <div><span data-testid="NotFound">{text || "Not Found"}</span></div>
 }
