@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotFound Component (ENZ) Should match snapshot 1`] = `
+<div>
+  <span
+    data-testid="NotFound"
+  >
+    Not Found
+  </span>
+</div>
+`;

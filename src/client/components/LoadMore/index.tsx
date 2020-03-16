@@ -1,7 +1,7 @@
 import * as React from "react"
-import Button, { ButtonProps } from "@material-ui/core/Button"
-import { darken } from "polished"
 import styled from "src/client/theme/styled"
+import { Button } from "@material-ui/core"
+import { darken } from "polished"
 
 interface IProps {
   onClick: any;
