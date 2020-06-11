@@ -1,9 +1,9 @@
 import React from "react"
 
 import Home from "."
-import { ThemeProvider } from "../../theme/styled"
 import { theme } from "../../theme/theme"
 import { render, fireEvent, wait } from "@testing-library/react"
+import { ThemeProvider } from "styled-components"
 
 jest.mock("../../api/phonewords")
 

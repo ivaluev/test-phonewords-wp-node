@@ -3,8 +3,8 @@ import { render, unmountComponentAtNode } from "react-dom"
 import { act, Simulate } from "react-dom/test-utils"
 
 import Home from "."
-import { ThemeProvider } from "../../theme/styled"
 import { theme } from "../../theme/theme"
+import { ThemeProvider } from "styled-components"
 
 jest.mock("../../api/phonewords")
 

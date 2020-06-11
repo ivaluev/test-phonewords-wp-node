@@ -1,5 +1,5 @@
 import * as React from "react"
-import styled from "src/client/theme/styled"
+import styled from "styled-components"
 import { Button } from "@material-ui/core"
 import { darken } from "polished"
 

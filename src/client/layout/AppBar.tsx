@@ -16,7 +16,7 @@ import { default as HomeIcon } from "@material-ui/icons/Home"
 import { Margin } from "./Margin"
 import { useHistory } from "react-router"
 import T from "./Translate";
-import styled from "../theme/styled";
+import styled from "styled-components";
 
 const StyledAppBar = styled(AppBarBase)`
   && {

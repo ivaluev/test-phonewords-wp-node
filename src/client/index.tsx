@@ -4,8 +4,8 @@ import Routes from "./pages/Routes";
 import registerServiceWorker from "./registerServiceWorker";
 import "./theme/globals";
 import GlobalStyle from "./theme/globals";
-import { ThemeProvider } from "./theme/styled";
 import { theme } from "./theme/theme";
+import { ThemeProvider } from "styled-components";
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>

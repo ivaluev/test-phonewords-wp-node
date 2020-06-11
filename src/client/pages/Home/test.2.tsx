@@ -1,11 +1,11 @@
 import React from "react"
 
 import Home from "."
-import { ThemeProvider } from "../../theme/styled"
 import { theme } from "../../theme/theme"
 import { mount } from "enzyme"
 import { InputBase } from "@material-ui/core"
 import { act } from "@testing-library/react"
+import { ThemeProvider } from "styled-components"
 
 jest.mock("../../api/phonewords")
 
