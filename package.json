@@ -43,7 +43,7 @@
     "react-router-dom": "^5.1.2",
     "styled-components": "^5.0.1",
     "styled-normalize": "^8.0.7",
-    "validator": "^10.6.0"
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "@testing-library/react": "^9.5.0",
